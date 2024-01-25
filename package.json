@@ -2,17 +2,19 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
-    "preview": "wrangler pages dev dist",
-    "deploy": "$npm_execpath run build && wrangler pages deploy dist"
+    "build:ssr": "vite build",
+    "build:ssg": "vite build --mode ssg",
+    "preview": "wrangler pages dev dist --compatibility-date=2024-01-25",
+    "deploy": "wrangler pages deploy dist"
   },
   "dependencies": {
     "hono": "4.0.0-rc.2"
   },
   "devDependencies": {
     "@cloudflare/workers-types": "^4.20231218.0",
-    "@hono/vite-cloudflare-pages": "^0.2.0",
+    "@hono/vite-cloudflare-pages": "^0.2.1",
     "@hono/vite-dev-server": "^0.4.0",
+    "@hono/vite-ssg": "^0.0.1",
     "vite": "^5.0.12",
     "wrangler": "^3.22.0"
   }

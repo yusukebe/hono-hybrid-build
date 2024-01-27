@@ -7,7 +7,7 @@
     "deploy:ssr": "wrangler deploy src/index.tsx --minify"
   },
   "dependencies": {
-    "hono": "4.0.0-rc.2"
+    "hono": "4.0.0-rc.3"
   },
   "devDependencies": {
     "@types/node": "^20.11.7",

@@ -4,7 +4,7 @@ import app from './src'
 toSSG(app, {
   dir: 'dist',
   afterResponseHook: (res) => {
-    return res.headers.get('x-disable-ssg') ? false : res
+    return res.headers.get('x-hono-disable-ssg') ? false : res
   },
   afterGenerateHook: (result) => {
     result.files.map((file) => {

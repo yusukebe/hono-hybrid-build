@@ -1,7 +1,4 @@
-import fs from 'node:fs/promises'
-import { toSSG } from 'hono/ssg'
+import { toSSG } from 'hono/bun'
 import app from './src'
 
-toSSG(app, fs, {
-  dir: 'dist'
-})
+toSSG(app, { dir: 'dist' })

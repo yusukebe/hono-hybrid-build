@@ -2,14 +2,16 @@
   "type": "module",
   "scripts": {
     "dev": "bun run --watch ./src/index.tsx",
-    "build:ssg": "tsx ./ssg-build.ts",
-    "deploy:ssg": "wrangler pages deploy dist"
+    "build:ssg": "rimraf dist && bun run ./ssg-build.ts",
+    "deploy:ssg": "wrangler pages deploy dist",
+    "deploy:ssr": "wrangler deploy src/index.tsx --minify"
   },
   "dependencies": {
     "hono": "4.0.0-rc.2"
   },
   "devDependencies": {
     "@types/node": "^20.11.7",
+    "rimraf": "^5.0.5",
     "wrangler": "^3.25.0"
   }
 }

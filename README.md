@@ -6,22 +6,16 @@ Dev:
 npm run dev
 ```
 
-SSR:
-
-```
-npm run build:ssr
-```
-
-SSG:
+Build the static site:
 
 ```
 npm run build:ssg
 ```
 
-Deploy:
+Deploy the static site:
 
 ```
-npm run deploy
+npm run deploy:ssg
 ```
 
 ## Author
